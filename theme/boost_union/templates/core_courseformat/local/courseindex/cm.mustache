@@ -51,7 +51,9 @@
     data-for="cm"
     data-id="{{id}}"
     role="treeitem"
->
+>   
+
+
     <span class="completioninfo courseindex-cmicon-cpl-sol" data-for="cm_completion" data-value="NaN"></span>
     <span class="courseindex-cmicon-container">
         <span class="courseindex-cmicon">
@@ -83,7 +85,13 @@
         <span class="completioninfo courseindex-cmicon-cpl-eol" data-for="_" data-value="NaN"></span>
         <span class="dragicon">{{#pix}}i/dragdrop{{/pix}}</span>
     </span>
+
+    
+
 </li>
+
+
+
 {{#js}}
 // Boost Union JS to change the completion indication if enabled.
 if (document.body.classList.contains('hascourseindexcmicons')) {

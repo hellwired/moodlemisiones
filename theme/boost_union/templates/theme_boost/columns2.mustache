@@ -60,7 +60,6 @@
     * Added smartmenu js to support third level submenus.
 }}
 {{> theme_boost/head }}
-
 <body {{{ bodyattributes }}}>
 {{> core/local/toast/wrapper}}
 
@@ -69,7 +68,6 @@
     {{{ output.standard_top_of_body_html }}}
 
     {{> theme_boost/navbar }}
-
     <div id="page" class="container-fluid d-print-block">
         {{> theme_boost_union/javascriptdisabledhint }}
         {{> theme_boost_union/infobanners }}
@@ -80,7 +78,15 @@
                 </div>
             {{/secondarymoremenu}}
         <div id="page-content" class="row pb-3 d-print-block">
-            <div id="region-main-box" class="col-12">
+            <div id="vertical-menu-box" class="col-12 col-md-3">
+                <nav id="vertical-menu" class="nav flex-column">
+                    <a class="nav-link active" href="#">Cursos</a>
+                    <a class="nav-link" href="#">Foros</a>
+                    <a class="nav-link" href="#">Actividades</a>
+                    <!-- Agrega más enlaces según sea necesario -->
+                </nav>
+            </div>
+            <div id="region-main-box" class="col-12 col-md-9">
                 {{#hasregionmainsettingsmenu}}
                 <div id="region-main-settings-menu" class="d-print-none {{#hasblocks}}has-blocks{{/hasblocks}}">
                     <div> {{{ regionmainsettingsmenu }}} </div>
@@ -99,7 +105,12 @@
                         {{> core/url_select}}
                     {{/overflow}}
                     {{{courserelatedhints}}}
-                    {{{ output.main_content }}}
+                    <div id="courses-search" class="mb-3">
+                        <input type="text" class="form-control" placeholder="Buscar cursos...">
+                    </div>
+                    <div id="courses-grid" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
+                        {{{ output.main_content }}}
+                    </div>
                     {{{ output.activity_navigation }}}
                     {{{ output.course_content_footer }}}
 
@@ -128,3 +139,4 @@ require(['theme_boost/loader', 'theme_boost/drawer'{{#includesmartmenu}}, 'theme
 {{#includesmartmenu}}SmartMenu.init();{{/includesmartmenu}}
 });
 {{/js}}
+}

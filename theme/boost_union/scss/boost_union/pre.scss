@@ -1,2 +1,45 @@
 /* This file is empty by purpose.
 You can add your SCSS code here if you really need to. */
+#side-pre {
+    float: left;
+    width: 25%;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-right: 1px solid #ddd;
+}
+
+#region-main-box {
+    float: right;
+    width: 75%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.courses-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.courses-grid > div {
+    width: 30%;
+    margin: 1.5%;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border: 1px solid #ddd;
+}

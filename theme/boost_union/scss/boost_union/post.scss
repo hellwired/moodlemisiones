@@ -2120,6 +2120,30 @@ body.theme_boost-union-footerbuttonnone.jsenabled {
     }
 }
 
+#vertical-menu {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-right: 1px solid #dee2e6;
+}
+
+#vertical-menu .nav-link {
+    color: #495057;
+    margin: 0.5rem 0;
+}
+
+#vertical-menu .nav-link.active {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+#courses-search {
+    margin-bottom: 1rem;
+}
+
+#courses-grid .coursebox {
+    margin-bottom: 1rem;
+}
+
 
 /*---------------------------------------
  * Footer menu
