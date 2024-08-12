@@ -78,10 +78,9 @@
             </div>
         {{/secondarymoremenu}}
         
-        <div id="page-content" class="row pb-3 d-print-block">
-            
+        <div id="page-content" class="row no-gutters d-print-block">
             <!-- Sidebar / Menu Lateral -->
-            <div id="region-main-box" class="col-md-3 col-lg-2 d-print-none">
+            <div id="region-side-box" class="col-md-3 col-lg-2 d-print-none">
                 {{#hasblocks}}
                 <section data-region="blocks-column" class="d-print-none" aria-label="{{#str}}blocks{{/str}}">
                     {{{ sidepreblocks }}}
@@ -96,7 +95,7 @@
                     <div> {{{ regionmainsettingsmenu }}} </div>
                 </div>
                 {{/hasregionmainsettingsmenu}}
-                <section id="region-main" {{#hasblocks}}class="has-blocks mb-3"{{/hasblocks}} aria-label="{{#str}}content{{/str}}">
+                <section id="region-main" {{#hasblocks}}class="has-blocks"{{/hasblocks}} aria-label="{{#str}}content{{/str}}">
                     {{#hasregionmainsettingsmenu}}
                         <div class="region_main_settings_menu_proxy"></div>
                     {{/hasregionmainsettingsmenu}}

@@ -1,3 +1,39 @@
+/* Ajustes para el menú lateral */
+#region-main-box {
+    background-color: #f8f9fa;
+    padding: 10px;
+    flex: 3;
+}
+
+/* Ajustes para las tarjetas de cursos */
+#page-content .card-deck .card {
+    margin-bottom: 1rem;
+    flex: 1 1 30%;
+    max-width: 30%;
+}
+
+/* Ajustes generales para alinear mejor el contenido */
+.container-fluid {
+    max-width: 95%;
+}
+
+#page-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+#region-side-box {
+    flex: 1;
+}
+
+/* Personaliza el texto de bienvenida */
+.welcome-message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #563d7c;
+}
+
+
 /*=======================================
  * Settings: Look -> Site branding
  ======================================*/
