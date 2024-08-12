@@ -51,26 +51,43 @@
 <div data-region="items-list" role="list">
     {{#items}}
         <div class="card mb-1" role="listitem">
-            <a href="{{{viewurl}}}" title="{{{name}}}">
-                <div class="card-body p-2 m-1">
-                    <div class="d-flex text-truncate">
-                        <div class="d-flex align-self-center activityiconcontainer theme-boost-union-{{modname}}">
-                            {{{icon}}}
-                        </div>
-                        <div class="w-100 line-height-3 text-truncate ml-2">
-                            <h6 class="mb-0 text-truncate"><span class="clickable">{{{name}}}</span></h6>
-                            <small class="text-truncate mb-0">{{{coursename}}}</small>
-                        </div>
+            <div class="card-body p-0 m-0">
+                <div class="d-flex flex-column h-100">
+                    <!-- Imagen o ícono del curso -->
+                    <div class="course-thumb-container">
+                        <a href="{{{viewurl}}}" title="{{{name}}}">
+                            <div class="activityiconcontainer theme-boost-union-{{modname}} p-3">
+                                {{{icon}}}
+                            </div>
+                        </a>
                     </div>
+                    <!-- Nombre del curso -->
+                    <div class="course-name-container flex-grow-1 p-3">
+                        <h6 class="mb-0 text-truncate">
+                            <a href="{{{viewurl}}}" title="{{{name}}}" class="text-dark">{{{name}}}</a>
+                        </h6>
+                        <small class="text-muted text-truncate">{{{coursename}}}</small>
+                    </div>
+                    <!-- Menú de acciones -->
+                    <div class="card-footer bg-white border-0 p-2">
+                        {{> block_myoverview/course-action-menu }}
+                    </div>
+                    <!-- Barra de progreso -->
+                    {{#hasprogress}}
+                    <div class="card-footer bg-white border-0 p-2">
+                        {{> block_myoverview/progress-bar }}
+                    </div>
+                    {{/hasprogress}}
                 </div>
-            </a>
+            </div>
         </div>
     {{/items}}
 </div>
+
 {{#hasmoreitems}}
-    <div data-region="more-items-button-container" class="mt-2 px-1">
-        <button type="button" class="btn btn-secondary btn-sm" data-action="more-items">
-            {{#str}}moreitems, block_recentlyaccesseditems {{/str}}
-        </button>
-    </div>
+<div data-region="more-items-button-container" class="mt-2 px-1">
+    <button type="button" class="btn btn-secondary btn-sm" data-action="more-items">
+        {{#str}}moreitems, block_recentlyaccesseditems{{/str}}
+    </button>
+</div>
 {{/hasmoreitems}}
