@@ -42,43 +42,21 @@
 }}
 
 <div class="container-fluid">
-    <div class="row">
-        <!-- Menú Vertical a la Izquierda -->
-        <div id="side-pre" class="col-3">
-            <nav>
-                <ul>
-                    <li><a href="#">Cursos</a></li>
-                    <li><a href="#">Foros</a></li>
-                    <li><a href="#">Actividades</a></li>
-                    <!-- Agrega más elementos de menú aquí -->
-                </ul>
-            </nav>
-        </div>
-        <!-- Contenido Principal a la Derecha -->
-        <div id="region-main-box" class="col-9">
-            <div id="region-main">
-                <div class="region-main-inner">
-                    <div class="search-bar">
-                        <input type="text" placeholder="Buscar cursos...">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
+        {{#cards}}
+            <div class="col my-3">
+                <div class="card bg-light h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{label}}</h5>
+                        <p class="card-text">{{desc}}</p>
                     </div>
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
-                        {{#cards}}
-                            <div class="col my-3">
-                                <div class="card bg-light h-100">
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title">{{label}}</h5>
-                                        <p class="card-text">{{desc}}</p>
-                                    </div>
-                                    <div class="card-footer">
-                                        <a href="{{url}}" class="btn btn-{{btn}} btn-block">{{label}}</a>
-                                    </div>
-                                </div>
-                            </div>
-                        {{/cards}}
+                    <div class="card-footer">
+                        <a href="{{url}}" class="btn btn-{{btn}} btn-block">{{label}}</a>
                     </div>
                 </div>
             </div>
-        </div>
+        {{/cards}}
     </div>
 </div>
+
 
